@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class IngredientDragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("ID must match recipe entries")]
-    public string ingredientId;
+    public IngredientSO ingredient;
 
     [Header("Optional: visuals")]
     public AudioClip pickUpSfx;
@@ -20,6 +20,9 @@ public class IngredientDragable : MonoBehaviour, IBeginDragHandler, IDragHandler
     private CauldronDropZone cauldron;
     private Canvas rootCanvas;
     private AudioSource audioSource;
+
+
+    Image ingredientImage;
 
  
 
@@ -35,6 +38,12 @@ public class IngredientDragable : MonoBehaviour, IBeginDragHandler, IDragHandler
         if (!audioSource)
             audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
+        ingredientImage = GetComponent<Image>();
+        if (ingredientImage != null && ingredient != null && ingredient.ingredientSprite != null)
+        {
+            ingredientImage.sprite = ingredient.ingredientSprite;
+        }
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -62,10 +71,11 @@ public class IngredientDragable : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Debug.Log("end drag");
         transform.SetParent(originalParent, true);
         rectTransform.anchoredPosition = originalPosition;
-        canvasGroup.blocksRaycasts = true;
-        canvasGroup.alpha = 1f;
+        //canvasGroup.blocksRaycasts = true;
+        //canvasGroup.alpha = 1f;
         rectTransform.localScale = Vector3.one;
 
         if (dropSfx) audioSource.PlayOneShot(dropSfx);
@@ -77,9 +87,12 @@ public class IngredientDragable : MonoBehaviour, IBeginDragHandler, IDragHandler
     /// </summary>
     public void ConsumeBackToShelf()
     {
-        Debug.Log("Ingredient " + ingredientId + " consumed back to shelf.");
+        //this happens before end drag, might need to pass a delegate to end drag?
+        Debug.Log("Ingredient " + ingredient.ingredientName + " consumed back to shelf.");
         transform.SetParent(originalParent, true);
         rectTransform.anchoredPosition = originalPosition;
+        canvasGroup.blocksRaycasts = false;
+        canvasGroup.alpha = 0.3f; // visually indicate it’s used up
     }
 
 

@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 1063eced5d6dbba45a3268b1ec814e35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2140809905520769456
+    second: Witches Brew art board-Recovered_0
+  - first:
+      213: 4451922088398373419
+    second: Witches Brew art board-Recovered_1
+  - first:
+      213: 8856387891572842990
+    second: Witches Brew art board-Recovered_2
+  - first:
+      213: -1353193711404205757
+    second: Witches Brew art board-Recovered_3
+  - first:
+      213: -8621072133597868516
+    second: Witches Brew art board-Recovered_4
+  - first:
+      213: -2722185771997230399
+    second: Witches Brew art board-Recovered_5
+  - first:
+      213: -4607564390753248927
+    second: Witches Brew art board-Recovered_6
+  - first:
+      213: 3370865119561430189
+    second: Witches Brew art board-Recovered_7
+  - first:
+      213: -1290937368902796125
+    second: Witches Brew art board-Recovered_8
+  - first:
+      213: -4592888261839345237
+    second: Witches Brew art board-Recovered_9
+  - first:
+      213: 5917728283697062063
+    second: Witches Brew art board-Recovered_10
+  - first:
+      213: -3473748952966167278
+    second: Witches Brew art board-Recovered_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 108
+        width: 88
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0560cc1cbb05a42e0800000000000000
+      internalID: -2140809905520769456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 109
+        width: 86
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2243b65d8768cd30800000000000000
+      internalID: 4451922088398373419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 27
+        width: 34
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1254e3dd538ea70800000000000000
+      internalID: 8856387891572842990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_3
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 88
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349b57f2d7d783de0800000000000000
+      internalID: -1353193711404205757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_4
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 28
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e41e5229ccb5880800000000000000
+      internalID: -8621072133597868516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 68
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca8b7f867ad83ad0800000000000000
+      internalID: -2722185771997230399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_6
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 66
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169d9693994ae00c0800000000000000
+      internalID: -4607564390753248927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 33
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4b63577f7b7ce20800000000000000
+      internalID: 3370865119561430189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 35
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac754b7d4ba51ee0800000000000000
+      internalID: -1290937368902796125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 10
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba92104c578c240c0800000000000000
+      internalID: -4592888261839345237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_10
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 4
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0ab03458eff1250800000000000000
+      internalID: 5917728283697062063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witches Brew art board-Recovered_11
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 5
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21501936bb3cacfc0800000000000000
+      internalID: -3473748952966167278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Witches Brew art board-Recovered_0: -2140809905520769456
+      Witches Brew art board-Recovered_1: 4451922088398373419
+      Witches Brew art board-Recovered_10: 5917728283697062063
+      Witches Brew art board-Recovered_11: -3473748952966167278
+      Witches Brew art board-Recovered_2: 8856387891572842990
+      Witches Brew art board-Recovered_3: -1353193711404205757
+      Witches Brew art board-Recovered_4: -8621072133597868516
+      Witches Brew art board-Recovered_5: -2722185771997230399
+      Witches Brew art board-Recovered_6: -4607564390753248927
+      Witches Brew art board-Recovered_7: 3370865119561430189
+      Witches Brew art board-Recovered_8: -1290937368902796125
+      Witches Brew art board-Recovered_9: -4592888261839345237
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
