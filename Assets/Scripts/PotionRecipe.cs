@@ -1,10 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PotionRecipe", menuName = "Scriptable Objects/PotionRecipe")] 
-public class PotionScriptableObject : ScriptableObject {
+public class PotionRecipe : ScriptableObject {
     public string potionName;
-    public string firstIngredient;
-    public string secondIngredient;
-    public string thirdIngredient;
+
+    public List<IngredientSO> ingredientList = new List<IngredientSO>();
+
+    //public string firstIngredient;
+    //public string secondIngredient;
+    //public string thirdIngredient;
 }
 
