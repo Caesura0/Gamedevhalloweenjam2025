@@ -7,8 +7,8 @@ public class PotionRecipe : ScriptableObject {
 
     public List<IngredientSO> ingredientList = new List<IngredientSO>();
 
-    //public string firstIngredient;
-    //public string secondIngredient;
-    //public string thirdIngredient;
+    //public IngredientSO firstIngredient;
+    //public IngredientSO secondIngredient;
+    //public IngredientSO thirdIngredient;
 }
 

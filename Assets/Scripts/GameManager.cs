@@ -34,19 +34,14 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        currentIngredientList.Add(ingredient);
-        Debug.Log($"Added Ingredient: {ingredient.ingredientName}");
-
-        if (currentPotion == null)
+        if(currentIngredientList.Contains(ingredient))
         {
-            Debug.LogWarning("No active recipe. Selecting one now.");
-            SetRandomPotion();
+            Debug.LogWarning($"Ingredient {ingredient.ingredientName} is already in the cauldron.");
+            currentIngredientList.Remove(ingredient);
         }
 
-        // If we've reached the exact number needed, evaluate
-        int needed = currentPotion != null ? currentPotion.ingredientList.Count : 3;
 
-        if (currentIngredientList.Count >= needed)
+        if (currentIngredientList.Count >= 0)
         {
             CheckPotion();                // evaluate success/fail
             currentIngredientList.Clear(); // reset cauldron
@@ -80,57 +75,16 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"New Potion: {currentPotion.potionName}");
         OnNewPotion?.Invoke(currentPotion);
+        //reset timer
+        //reset game visual
     }
 
     void CheckPotion()
     {
-        if (currentPotion == null)
-        {
-            Debug.LogWarning("Tried to check a potion without an active recipe.");
-            return;
-        }
 
-        bool match = MultisetMatches(currentIngredientList, currentPotion.ingredientList);
-        if (match)
-        {
-            Debug.Log($"SUCCESS: Brewed {currentPotion.potionName}!");
-            OnBrewSuccess?.Invoke(currentPotion);
-        }
-        else
-        {
-            Debug.Log("FAIL: Ingredients did not match the recipe.");
-            OnBrewFail?.Invoke(new List<IngredientSO>(currentIngredientList));
-        }
     }
 
-    // Order-independent comparison that supports duplicates
-    static bool MultisetMatches(List<IngredientSO> a, List<IngredientSO> b)
-    {
-        if (a == null || b == null) return false;
-        if (a.Count != b.Count) return false;
 
-        // Count occurrences using IDs (stable across domain reloads)
-        Dictionary<string, int> counts = new();
-        foreach (var ing in a)
-        {
-            if (ing == null) return false;
-            string key = string.IsNullOrEmpty(ing.ingredientName) ? ing.name : ing.ingredientName;
-            counts.TryGetValue(key, out int c);
-            counts[key] = c + 1;
-        }
-
-        foreach (var ing in b)
-        {
-            if (ing == null) return false;
-            string key = string.IsNullOrEmpty(ing.ingredientName) ? ing.name : ing.ingredientName;
-            if (!counts.TryGetValue(key, out int c)) return false;
-            c--;
-            if (c == 0) counts.Remove(key);
-            else counts[key] = c;
-        }
-
-        return counts.Count == 0;
-    }
 
     // Optional helpers if you want manual control
     public void ClearCauldron() => currentIngredientList.Clear();
