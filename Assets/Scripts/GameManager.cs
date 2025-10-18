@@ -19,10 +19,14 @@ public class GameManager : MonoBehaviour
     // The player's current thrown-in ingredients
     readonly List<IngredientSO> currentIngredientList = new();
 
+
+    ReceiptTvUI receiptTvUI;
+
     void Start()
     {
         // Optionally choose a starting recipe
         SetRandomPotion();
+        receiptTvUI = FindAnyObjectByType<ReceiptTvUI>();
     }
 
     // Called by your drag/drop or button system when an ingredient is added
@@ -77,6 +81,10 @@ public class GameManager : MonoBehaviour
         OnNewPotion?.Invoke(currentPotion);
         //reset timer
         //reset game visual
+        if (receiptTvUI != null)
+        {
+            receiptTvUI.DisplayRecipe(currentPotion);
+        }
     }
 
     void CheckPotion()
