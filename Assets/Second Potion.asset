@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b59c62c520a29e489a672b9d9f95126, type: 3}
-  m_Name: FirstPotion
+  m_Name: Second Potion
   m_EditorClassIdentifier: 
   potionName: 
   ingredientList:
+  - {fileID: 11400000, guid: 0c3fedc413e58434d8457b16f4e4c0a2, type: 2}
   - {fileID: 11400000, guid: 73ca9147728b4b34488a4055a6942d6d, type: 2}
-  - {fileID: 11400000, guid: 70922e0a12603c74dac134f9dee5be1b, type: 2}
-  - {fileID: 11400000, guid: bef39ba6af80dc941a724cf736718b86, type: 2}
+  - {fileID: 11400000, guid: 443dbc33107f330418686b9d6ded11c3, type: 2}

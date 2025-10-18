@@ -32,6 +32,8 @@ public class CauldronDropZone : MonoBehaviour, IDropHandler
 
         // Add ingredient to the cauldron (game logic)
 
+        GameManager.instance.AddIngredient(ingredient.ingredient);
+
 
         // Visual feedback
         if (splashFx) splashFx.Play();

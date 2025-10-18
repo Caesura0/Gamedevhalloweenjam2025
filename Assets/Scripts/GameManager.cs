@@ -13,20 +13,44 @@ public class GameManager : MonoBehaviour
     public UnityEvent<PotionRecipe> OnBrewSuccess; // e.g., success SFX/VFX
     public UnityEvent<List<IngredientSO>> OnBrewFail; // e.g., error SFX/VFX, show what was added
 
+    public float timerDuration = 60f; // Duration of the game timer in seconds
+
+    public static event System.Action OnPotionDone;
+
     PotionRecipe currentPotion;
     PotionRecipe lastPotion;
 
     // The player's current thrown-in ingredients
-    readonly List<IngredientSO> currentIngredientList = new();
+    List<IngredientSO> currentIngredientList = new();
 
 
     ReceiptTvUI receiptTvUI;
 
+    int successfulPotions;
+
+
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
+        Debug.Log("GameManager started.");
         // Optionally choose a starting recipe
         SetRandomPotion();
         receiptTvUI = FindAnyObjectByType<ReceiptTvUI>();
+
+        Invoke(nameof(StartGame), 2f);
     }
 
     // Called by your drag/drop or button system when an ingredient is added
@@ -42,13 +66,15 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning($"Ingredient {ingredient.ingredientName} is already in the cauldron.");
             currentIngredientList.Remove(ingredient);
+            ReceiptTvUI.instance.DisplayRecipe(currentIngredientList); // Update display
         }
 
 
-        if (currentIngredientList.Count >= 0)
+        if (currentIngredientList.Count <= 0)
         {
             CheckPotion();                // evaluate success/fail
             currentIngredientList.Clear(); // reset cauldron
+            OnPotionDone?.Invoke();        // notify listeners
             SetRandomPotion();            // pick the next order
         }
     }
@@ -81,17 +107,22 @@ public class GameManager : MonoBehaviour
         OnNewPotion?.Invoke(currentPotion);
         //reset timer
         //reset game visual
-        if (receiptTvUI != null)
-        {
-            receiptTvUI.DisplayRecipe(currentPotion);
-        }
-    }
+        currentIngredientList = new List<IngredientSO>(currentPotion.ingredientList);
+        ReceiptTvUI.instance.DisplayRecipe(currentIngredientList);
+    
+}
 
     void CheckPotion()
     {
 
     }
 
+
+    public void StartGame()
+    {
+        
+        TimerUI.instance.BeginCountdown(timerDuration);
+    }
 
 
     // Optional helpers if you want manual control

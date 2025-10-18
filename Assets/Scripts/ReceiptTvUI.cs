@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ReceiptTvUI : MonoBehaviour
@@ -5,10 +7,23 @@ public class ReceiptTvUI : MonoBehaviour
 
     public GameObject imagePrefab;
 
+    public static ReceiptTvUI instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
     // hook this up to an event
-    public void DisplayRecipe(PotionRecipe recipe)
+    public void DisplayRecipe(List<IngredientSO> recipe)
     {
 
         foreach (Transform child in transform)
@@ -16,7 +31,7 @@ public class ReceiptTvUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (var ingredient in recipe.ingredientList)
+        foreach (var ingredient in recipe)
         {
             GameObject imgObj = Instantiate(imagePrefab, transform);
             var imgComponent = imgObj.GetComponent<UnityEngine.UI.Image>();

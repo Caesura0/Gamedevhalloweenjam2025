@@ -5,9 +5,12 @@ using UnityEngine.Events; // Required for UnityEvent
 
 public class TimerUI : MonoBehaviour
 {
-    private TextMeshProUGUI timerText;
+    public TextMeshProUGUI timerText;
     private float timeRemaining;
     private bool isRunning = false;
+
+    public static TimerUI instance;
+
 
     [Tooltip("Event triggered when the timer reaches zero.")]
     public UnityEvent OnTimerEnd;
@@ -18,6 +21,14 @@ public class TimerUI : MonoBehaviour
         timerText = GetComponent<TextMeshProUGUI>();
         // Set the initial display text
         timerText.text = "00:00:00";
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     /// Update is called once per frame.
@@ -26,8 +37,10 @@ public class TimerUI : MonoBehaviour
         // Only process the timer if it's running
         if (isRunning)
         {
+            //Debug.Log("Timer running: " + timeRemaining);
             if (timeRemaining > 0)
             {
+                //Debug.Log("Time remaining: " + timeRemaining);
                 // Decrease the time and update the display
                 timeRemaining -= Time.deltaTime;
                 UpdateTimerDisplay();
@@ -38,6 +51,7 @@ public class TimerUI : MonoBehaviour
                 timeRemaining = 0;
                 isRunning = false;
                 UpdateTimerDisplay();
+
                 OnTimerEnd.Invoke(); // Trigger the event for other scripts
             }
         }
@@ -59,6 +73,7 @@ public class TimerUI : MonoBehaviour
     /// Call this method from another script to begin the timer.
     public void BeginCountdown(float durationInSeconds)
     {
+        Debug.Log("Starting countdown: " + durationInSeconds + " seconds");
         timeRemaining = durationInSeconds;
         isRunning = true;
     }

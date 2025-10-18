@@ -45,6 +45,23 @@ public class IngredientDragable : MonoBehaviour, IBeginDragHandler, IDragHandler
         }
 
     }
+    private void Start()
+    {
+        GameManager.OnPotionDone += GameManager_OnPotionDone; 
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnPotionDone -= GameManager_OnPotionDone;
+    }
+
+
+
+    private void GameManager_OnPotionDone()
+    {
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.alpha = 1f; 
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
