@@ -12,9 +12,7 @@ public class TimerUI : MonoBehaviour
     [Tooltip("Event triggered when the timer reaches zero.")]
     public UnityEvent OnTimerEnd;
 
-    /// <summary>
     /// Called when the script instance is being loaded.
-    /// </summary>
     void Awake()
     {
         timerText = GetComponent<TextMeshProUGUI>();
@@ -22,9 +20,7 @@ public class TimerUI : MonoBehaviour
         timerText.text = "00:00:00";
     }
 
-    /// <summary>
     /// Update is called once per frame.
-    /// </summary>
     void Update()
     {
         // Only process the timer if it's running
@@ -47,9 +43,7 @@ public class TimerUI : MonoBehaviour
         }
     }
 
-    /// <summary>
     /// Updates the text display with the formatted remaining time.
-    /// </summary>
     private void UpdateTimerDisplay()
     {
         // Use TimeSpan to easily format the seconds into MM:SS:ff
@@ -60,11 +54,9 @@ public class TimerUI : MonoBehaviour
             timeSpan.Milliseconds / 10);
     }
 
-    /// <summary>
+    
     /// Starts the countdown from a specific time in seconds.
     /// Call this method from another script to begin the timer.
-    /// </summary>
-    /// <param name="durationInSeconds">The time to count down from.</param>
     public void BeginCountdown(float durationInSeconds)
     {
         timeRemaining = durationInSeconds;
