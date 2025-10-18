@@ -51,6 +51,9 @@ public class TimerUI : MonoBehaviour
                 timeRemaining = 0;
                 isRunning = false;
                 UpdateTimerDisplay();
+                float temp = 6; // Placeholder for potions crafted to test GameOverUI
+                GameOverUI.instance.ShowGameOver(temp); // Show game over screen and pass potions crafted count
+
 
                 OnTimerEnd.Invoke(); // Trigger the event for other scripts
             }
